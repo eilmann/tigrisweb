@@ -118,7 +118,7 @@ if (isset($_GET['edit_postID'])) {
             <label for="postPic">Current Post Picture:</label>
             <img src="<?php echo $edit_row['postPic']; ?>" alt="Current Post Picture" style="max-width: 300px; margin-bottom: 10px;">
             <label for="newPostPic">New Post Picture:</label>
-            <input type="file" name="newPostPic">
+            <input type="file" accept=".jpg, .png" name="newPostPic">
 
             <button type="submit">Update Feed Post</button>
         </form>

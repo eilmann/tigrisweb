@@ -16,8 +16,9 @@ function logoutParticipant() {
     session_destroy();
 }
 
-function loginAdmin($adminID) {
+function loginAdmin($adminID, $adminName) {
     $_SESSION['adminID'] = $adminID;
+    $_SESSION['adminName'] = $adminName;
 }
 
 function isAdminLoggedIn() {

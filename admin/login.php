@@ -12,7 +12,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($result->num_rows == 1) {
         // Successful login
-        $_SESSION['adminID'] = $adminID; // Store adminID in session
+        $row = $result ->fetch_assoc();
+        loginAdmin($row['adminID'], $row['adminName']);
         header("Location: dashboard.php"); // Redirect to admin dashboard
         exit();
     } else {

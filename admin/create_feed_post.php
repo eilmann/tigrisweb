@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             VALUES ('$postID', '$formID', '$bracketID', '$scheduleID', '$postTitle', '$postDate', '$postDesc', '$postPic')";
 
     if ($conn->query($sql) === TRUE) {
-        echo "Post added successfully!";
+        echo '<script>alert("Post added successfully!"); window.location.href = "manage_feed_post.php";</script>';
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
@@ -98,7 +98,7 @@ $conn->close();
             <textarea name="postDesc" rows="4" required></textarea>
 
             <label for="postPic">Post Picture:</label>
-            <input type="file" name="postPic">
+            <input type="file" accept=".jpg, .png" name="postPic">
 
             <!-- Add other form fields -->
 

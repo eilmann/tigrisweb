@@ -27,13 +27,15 @@ include('../includes/session.php');
         </nav>
     </header>
 
-    <main>
+    <main class="main-white">
         <!-- Display greeting message -->
-
         <div>
         <?php
+
+        $adminName = $_SESSION['adminName'];
+        
         if (isAdminLoggedIn()) {
-            echo '<p class="greeting-message">Hello, ' . $_SESSION['adminID'] . '!</p>';
+            echo '<h1 class="greeting-message">Hello, ' . $_SESSION['adminName'] . '!</h1>';
         }
         ?>
 

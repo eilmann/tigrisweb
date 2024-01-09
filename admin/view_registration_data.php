@@ -43,8 +43,8 @@ if (isset($_GET['formID'])) {
         </nav>
     </header>
 
-    <main class="admin-main">
-        <h2>View Registration Data</h2>
+    <main class="main-white">
+        <h1>View Registration Data</h1>
 
         <a href="manage_registration_form.php" class="back-button">Back to Manage Forms</a>
 

@@ -34,20 +34,31 @@ $participantData = getParticipantData($participantID);
         <!-- Place the logo and title on the top left -->
         <div class="logo-container">
             <a href="../client/index.php">
-                <img src="<?php echo $participantData['participantPic']; ?>" alt="Profile Picture">
+                <img src="../img/tigris_logo.png" alt="Logo">
             </a>
-            <h1>Participant Profile</h1>
+            <h1>UTHM Tigris E-Sports Website</h1>
         </div>
         <nav>
-            <a class="login-button" href="../participant/logout.php">Logout</a>
+            <?php
+                // Check if a participant is logged in
+                if (isParticipantLoggedIn()) {
+                    $participantID = $_SESSION['participantID'];
+                    $participantData = getParticipantData($participantID);
+                    
+                    echo '<a class="login-button" href="../participant/logout.php">Logout</a>';
+                } else {
+                    echo '<a class="login-button" href="../participant/login.php">Login</a>';
+                }
+            ?>   
         </nav>
     </header>
 
-    <main class="admin-main">
-        <h2>Your Profile Information</h2>
+    <main class="form">
+        <h1>Player Profile</h1>
         <p><strong>Participant ID:</strong> <?php echo $participantData['participantID']; ?></p>
         <p><strong>Name:</strong> <?php echo $participantData['participantName']; ?></p>
-        <p><strong>Email:</strong> <?php echo $participantData['email']; ?></p>
+        <p><strong>Email:</strong> <?php echo $participantData['participantEmail']; ?></p>
+        <p><strong>Profile Picture:</strong> <img class="profile-page" src="<?php echo $participantData['participantPic']; ?>" alt="Profile Picture" style="height: 300px; width: auto;"></p>
         <!-- Add other fields as needed -->
 
         <div class="profile-buttons">

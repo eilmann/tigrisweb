@@ -39,8 +39,8 @@ $result = $conn->query($sql);
         </nav>
     </header>
 
-    <main class="admin-main">
-        <h2>Manage Registration Forms</h2>
+    <main class="main-white">
+        <h1>Manage Registration Forms</h1>
 
         <a href="create_registration_form.php" class="create-post-button">Create New Form</a>
 

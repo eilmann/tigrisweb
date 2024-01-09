@@ -22,7 +22,7 @@ function getParticipantData($participantID) {
 </head>
 <body>
 
-    <header>
+    <header class="index-header">
         <!-- Place the logo and title on the top left -->
         <div class="logo-container">
             <a href="../client/index.php">
@@ -46,7 +46,14 @@ function getParticipantData($participantID) {
         </nav>
     </header>
 
-    <main>
+    <div class="video-playback">
+        <video autoplay loop muted>
+            <source src="../img/tigris_vid.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <main class="black-main">
+        <h1>Feed Post</h1>
         <!-- Display events/feed posts here -->
         <?php
 
@@ -71,6 +78,8 @@ function getParticipantData($participantID) {
                 if (isParticipantLoggedIn()) {
                     // Add Join Tournament button with formID parameter
                     echo '<a href="../participant/tournament_registration.php?formID=' . $row['formID'] . '">Join Tournament</a>';
+                } else {
+                    echo '<a href="../participant/login.php">Join Tournament</a>';
                 }
 
                 // Add other fields as needed

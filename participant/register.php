@@ -56,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             if ($conn->query($sql) === TRUE) {
                 // Registration successful, you can redirect to login page or perform other actions
-                header("Location: login.php");
+                echo '<script>alert("Registration successfull!"); window.location.href = "login.php";</script>';
                 exit();
             } else {
                 $registrationError = "Error: " . $sql . "<br>" . $conn->error;

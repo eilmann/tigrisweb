@@ -39,8 +39,8 @@ $result = $conn->query($sql);
         </nav>
     </header>
 
-    <main class="admin-main">
-        <h2>Manage Feed Posts</h2>
+    <main class="main-white">
+        <h1>Manage Feed Posts</h1>
 
         <a href="create_feed_post.php" class="create-post-button">Create New Post</a>
 

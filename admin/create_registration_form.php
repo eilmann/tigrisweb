@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                    VALUES ('$formID', '$formTitle', '$description', $registration_fee, $proof_of_payment_toggle)";
 
     if ($conn->query($insert_sql) === TRUE) {
-        echo '<script>alert("Registration form added successfully!");</script>';
+        echo '<script>alert("Registration form added successfully!"); window.location.href = "manage_registration_form.php";</script>';
     } else {
         echo '<script>alert("Error: ' . $insert_sql . '<br>' . $conn->error . '");</script>';
     }
@@ -66,7 +66,7 @@ $conn->close();
     <main class="admin-main">
         <!-- Admin Registration Form -->
         <form action="create_registration_form.php" method="post" class="form">
-            <h1>Create new Registration Form</h1>
+            <h1>Create New Registration Form</h1>
             <!-- Add form fields for registration form input (formID, formTitle, description, registration_fee, proof_of_payment_toggle) -->
             <label for="formID">Form ID:</label>
             <input type="text" name="formID" value="FI<?= str_pad($latestFormID, 4, '0', STR_PAD_LEFT); ?>" required>
