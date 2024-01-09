@@ -32,24 +32,23 @@ function getParticipantData($participantID) {
         </div>
         <nav>
             <?php
-            // Check if a participant is logged in
-            if (isParticipantLoggedIn()) {
-                $participantID = $_SESSION['participantID'];
-                $participantData = getParticipantData($participantID);
-
-                echo '<a class="login-button" href="../participant/logout.php">Logout</a>';
-                echo '<button class="" onclick="viewProfile()">View Profile</button>';
-            } else {
-                echo '<a class="login-button" href="../participant/login.php">Login</a>';
-            }
-            ?>
+                // Check if a participant is logged in
+                if (isParticipantLoggedIn()) {
+                    $participantID = $_SESSION['participantID'];
+                    $participantData = getParticipantData($participantID);
+                    
+                    echo '<a class="profile-link" href="../participant/view_profile.php" style="background-image: url(\'' . $participantData['participantPic'] . '\')"></a>';
+                    echo '<a class="login-button" href="../participant/logout.php">Logout</a>';
+                } else {
+                    echo '<a class="login-button" href="../participant/login.php">Login</a>';
+                }
+            ?>   
         </nav>
     </header>
 
     <main>
         <!-- Display events/feed posts here -->
         <?php
-        // Include the database connection file
 
         // Query to retrieve feed post data (adjust based on your database structure)
         $sql = "SELECT * FROM posts ORDER BY postDate DESC"; // Order by postDate in descending order
