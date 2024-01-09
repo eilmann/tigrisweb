@@ -1,0 +1,281 @@
+/* ../css/general_style.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../img/tigris_background.jpg'); /* Replace 'path/to/your/background-image.jpg' with the actual path to your image */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+}
+
+header {
+    background-color: rgba(51, 51, 51, 0.8); /* Use rgba for translucency */
+    color: white;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    max-height: 40px; /* Adjust the height of the logo as needed */
+    margin-right: 10px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a.login-button {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+nav a.login-button:hover {
+    background-color: #555;
+}
+
+nav button{
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 10px; /* Adjust the margin as needed */
+}
+
+nav button:hover {
+    background-color: #222;
+}
+
+main {
+    padding: 20px;
+}
+
+.admin-main {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(calc(33.33% - 20px), 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 100%; /* Set maximum width */
+    box-sizing: border-box; /* Include padding in the width */
+    padding: 10px;
+}
+
+.card img {
+    max-width: 100%; /* Set maximum width for images inside cards */
+    height: 300px; /* Set a fixed height for the images */
+    width: auto; /* Ensure that the width adjusts to maintain aspect ratio */
+    display: block; /* Ensure that the image doesn't create extra space below */
+    margin: 0 auto; /* Center align the image horizontally */
+    border-radius: 5px; /* Apply border-radius to the image */
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Adjust the number of items per row for smaller screens */
+@media (max-width: 1024px) {
+    .card-container {
+        grid-template-columns: repeat(auto-fill, minmax(calc(50% - 20px), 1fr)); /* 2 items per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .card-container {
+        grid-template-columns: repeat(auto-fill, minmax(calc(100% - 20px), 1fr)); /* 1 item per row */
+    }
+}
+
+/*form */
+.form {
+    background-color: rgba(255, 255, 255, 0.8); /* Use rgba for translucency */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.form button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form button:hover {
+    background-color: #222;
+}
+
+.form p.error {
+    color: #ff0000;
+    margin-top: 10px;
+}
+
+.login-links {
+    text-align: center;
+    margin-top: 10px; /* Add margin to separate from the login form */
+}
+
+.login-links p {
+    margin: 10px 0;
+}
+
+.login-links a {
+    text-decoration: none;
+    color: #ff8800;
+    transition: color 0.3s;
+}
+
+.login-links a:hover {
+    color: #000;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative; /* Remove fixed positioning */
+    clear: both; /* Clear floats from main content */
+    margin-top: 20px; /* Add margin to separate from main content */
+}
+
+/* Dashboard buttons styling */
+.dashboard-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.dashboard-button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dashboard-button:hover {
+    background-color: #222;
+}
+
+/* Greeting message styling */
+.greeting-message {
+    color: rgb(255, 255, 255);
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #333;
+}
+
+/* manage feed  */
+.create-post-button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+}
+
+.create-post-button:hover {
+    background-color: #222;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #000000;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #333333;
+    color: white;
+}
+
+
+a.edit-link, a.delete-link {
+    display: inline-block;
+    padding: 5px 10px;
+    text-decoration: none;
+    margin-right: 5px;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+a.edit-link {
+    background-color: #333;
+    color: white;
+}
+
+a.delete-link {
+    background-color: #ff3333;
+    color: white;
+}
+
+a.edit-link:hover, a.delete-link:hover {
+    background-color: #222;
+}
