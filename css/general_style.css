@@ -407,3 +407,42 @@ a.edit-link:hover, a.delete-link:hover {
     background-color: #222;
 }
 
+/* Additional CSS for styling dropdowns in the bracket generator */
+.form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    font-size: 16px;
+    appearance: none; /* Remove default arrow */
+    -webkit-appearance: none; /* Remove default arrow for Chrome */
+    -moz-appearance: none; /* Remove default arrow for Firefox */
+}
+
+.form select:focus {
+    outline: none; /* Remove focus outline */
+    border-color: #333; /* Change border color on focus */
+}
+
+.form select option {
+    background-color: #fff;
+    color: #333;
+}
+
+.form button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%; /* Make button full width */
+}
+
+.form button:hover {
+    background-color: #222;
+}
