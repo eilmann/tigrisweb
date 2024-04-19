@@ -54,6 +54,7 @@ $conn->close();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/tigris_logo.png" type="icon">
     <title>Create Feed Post - Admin</title>
     <link rel="stylesheet" href="../css/general_style.css">
 </head>
